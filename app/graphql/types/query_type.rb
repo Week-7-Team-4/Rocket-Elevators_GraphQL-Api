@@ -16,26 +16,58 @@ module Types
     def address
       Address.all
     end
+
     field :battery, [BatteryType], null: false
     def battery
       Battery.all
     end
+
     field :building, [BuildingType], null: false
     def building
       Building.all
     end
+
     field :column, [ColumnType], null: false
     def column
       Column.all
     end
+
     field :customer, [CustomerType], null: false
     def customer
       Customer.all
     end
+
+    field :elevator, [ElevatorType], null: false
+    def elevator 
+      Elevator.all
+    end
+
+    field :employee, [EmployeeType], null: false
+    def employee
+      Employee.all
+    end
+
+    # field :lead, [LeadType], null: false
+    # def lead
+    #   Lead.all
+    # end
+
+    #   field quote, [QuoteType], null: false
+    # def quote
+    #   Quote.all
+    # end
+
+    # field user, [UserType], null: false
+    # def user
+    #   User.all
+    # end
+        # it doesnt work whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
     # field :building_detail, [Building_detailType], null: false
     # def building_detail
     #   Building_details.all
     # end
+
   end
 end
 
