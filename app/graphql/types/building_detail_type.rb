@@ -12,7 +12,7 @@ module Types
     field :building_detail_info, [String], null: true
     # define what the new field will extract like information
     def building_detail_info
-      return ["Id: #{object.id}", "Building Id: #{object.building_id}", "Information Key: #{object.information_key}", "Value: #{object.value}"]
+      return ["Id: #{object.id}", "Building Id: #{object.building_id}", "Information Key: #{object.info_key}", "Value: #{object.value}"]
     end
 
     # Adds the queryable  field of building in the buildingdetails type class

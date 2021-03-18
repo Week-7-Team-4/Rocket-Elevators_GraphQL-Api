@@ -18,7 +18,7 @@ module Types
     field :longitude, String, null: true
 
     field :address_information, [String], null: false
-    
+
     # function that gathers all the information
     def address_information
       thing = ""
@@ -33,7 +33,7 @@ module Types
 
     # Adds the queryable field of building in the address type class
     field :building, Types::BuildingType, null: true
-
+    
     # Defines the building attribute where the address_id is equal to the building id
     def building
       Building.where(id: object.building_id)[0]

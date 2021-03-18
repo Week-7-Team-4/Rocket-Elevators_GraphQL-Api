@@ -53,13 +53,13 @@ module Types
     end
     
 
-    field :all_interventions, Types::FactInterventionType, null: false do
-      argument :id, ID, required: true
-    end
+    # field :all_interventions, Types::FactInterventionType, null: false do
+    #   argument :id, ID, required: true
+    # end
 
-    def all_interventions(id:)
-      FactIntervention.find(id)
-    end
+    # def all_interventions(id:)
+    #   FactIntervention.find(id)
+    # end
 
     field :employee, [EmployeeType], null: false do
       argument :userId, Integer, required: true
