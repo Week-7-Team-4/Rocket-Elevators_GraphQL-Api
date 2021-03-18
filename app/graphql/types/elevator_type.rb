@@ -12,5 +12,14 @@ module Types
     field :created_at, String, null: true
     field :updated_at, String, null: true
     field :column_id, Integer, null: true
+
+    
+    # Adds the queryable field of column in the elevator type class
+    field :column, Types::ColumnType, null: true
+
+     # Defines the column attribute where the elevator_id is equal to the column_id
+    def column
+      Column.where(id: object.column_id)[0]
+    end
   end
 end
