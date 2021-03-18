@@ -46,7 +46,11 @@ module Types
     def employee
       Employee.all
     end
-
+    
+    field :all_interventions, [FactInterventionType], null: false
+    def all_interventions
+      FactIntervention.all
+    end
     # field :lead, [LeadType], null: false
     # def lead
     #   Lead.all
