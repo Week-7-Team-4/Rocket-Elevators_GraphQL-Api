@@ -46,7 +46,26 @@ module Types
     def employee
       Employee.all
     end
+    
+    field :all_interventions, [FactInterventionType], null: false
+    def all_interventions
+      FactIntervention.all
+    end
+    
 
+    field :all_interventions, Types::FactInterventionType, null: false do
+      argument :id, ID, required: true
+    end
+    def all_interventions(id:)
+      FactIntervention.find(id)
+    end
+
+    field :employee, [EmployeeType], null: false do
+      argument :userId, Integer, required: true
+    end
+    def employee(userId:)
+      Employee.find(userId)
+    end
     # field :lead, [LeadType], null: false
     # def lead
     #   Lead.all
@@ -63,10 +82,10 @@ module Types
     # end
         # it doesnt work whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
-    # field :building_detail, [Building_detailType], null: false
-    # def building_detail
-    #   Building_details.all
-    # end
+    field :buildingdetail, [BuildingDetailType], null: false
+    def buildingdetail
+      BuildingDetail.all
+    end
 
   end
 end
