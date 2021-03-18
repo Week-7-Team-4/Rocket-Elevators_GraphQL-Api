@@ -5,8 +5,9 @@ module Types
     field :created_at, String, null: true
     field :updated_at, String, null: true
     field :building_id, Integer, null: true
+    field :id, ID, null: false
 
-    
+
     # Adds a new field to building_detail
     field :building_detail_info, [String], null: true
     # define what the new field will extract like information

@@ -12,7 +12,8 @@ module Types
     field :status, String, null: true
     field :created_at, String, null: true
     field :updated_at, String, null: true
-    # field :id ,Integer, null: true
+    field :id, ID, null: false
+   
    
    
     # field :intervention_info, [String], null: true

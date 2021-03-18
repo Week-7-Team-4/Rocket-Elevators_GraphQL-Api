@@ -8,5 +8,7 @@ module Types
     field :created_at, String, null: true
     field :updated_at, String, null: true
     field :admin, Boolean, null: true
+    field :id, ID, null: false
+   
   end
 end

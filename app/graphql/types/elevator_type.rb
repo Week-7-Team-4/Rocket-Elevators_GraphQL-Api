@@ -12,6 +12,7 @@ module Types
     field :created_at, String, null: true
     field :updated_at, String, null: true
     field :column_id, Integer, null: true
+    field :id, ID, null: false
 
     
     # Adds the queryable field of column in the elevator type class

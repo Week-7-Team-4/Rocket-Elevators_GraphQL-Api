@@ -13,8 +13,8 @@ module Types
     field :updated_at, String, null: true
     field :user_id, Integer, null: true
     field :address_id, Integer, null: true
-    
-    # added to see the present customer ID
     field :id, ID, null: false
+
+
   end
 end

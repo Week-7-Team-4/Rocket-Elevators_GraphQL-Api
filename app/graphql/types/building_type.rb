@@ -10,6 +10,7 @@ module Types
     field :updated_at, String, null: true
     field :customer_id, Integer, null: true
     field :address_id, String, null: true
+    field :id, ID, null: false
 
     field :customer_info, [String], null: true
 
