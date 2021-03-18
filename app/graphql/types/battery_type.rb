@@ -11,5 +11,10 @@ module Types
     field :updated_at, String, null: true
     field :building_id, Integer, null: true
     field :employee_id, Integer, null: true
+
+    field :building, Types::BuildingType, null: true
+    def Building
+      Building.where(id: object.building_id)[0]
+    end
   end
 end
