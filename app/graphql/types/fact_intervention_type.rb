@@ -22,35 +22,35 @@ module Types
     #   return ["Id: #{object.id}", "Building Id: #{object.building_id}", "Start Time: #{object.start_intervention}", "End Time: #{object.end_intervention}", "Result: #{object.result}", "Report: #{object.report}", "Status: #{object.status}"]
     # end
 
-    # field :building_detail, Types::BuildingDetailType, null: true
+    field :building_detail, Types::BuildingDetailType, null: true
 
-    # def building_detail
-    #   build = Building.where(id: object.building_id)[0]
-    #   return BuildingDetail.where(building_id: build.id)[0]
-    # end
+    def building_detail
+      build = Building.where(id: object.building_id)[0]
+      return BuildingDetail.where(building_id: build.id)[0]
+    end
 
-    # # Adds the queryable field of building in the FactIntervention type class
-    # field :building, Types::BuildingType, null: true
+    # Adds the queryable field of building in the FactIntervention type class
+    field :building, Types::BuildingType, null: true
 
-    # # Defines the building attribute where the FactIntervention_id  is equal to the building id
-    # def building
-    #   Building.where(id: object.building_id)[0]
-    # end
+    # Defines the building attribute where the FactIntervention_id  is equal to the building id
+    def building
+      Building.where(id: object.building_id)[0]
+    end
 
-    # # Adds the queryable field of employee in the FactIntervention type class
-    # field :employee, Types::EmployeeType, null: true
+    # Adds the queryable field of employee in the FactIntervention type class
+    field :employee, Types::EmployeeType, null: true
 
-    # # Defines the employee attribute where the FactIntervention_id is equal to the employee_id
-    # def employee
-    #   Employee.where(id: object.employee_id)[0]
-    # end
+    # Defines the employee attribute where the FactIntervention_id is equal to the employee_id
+    def employee
+      Employee.where(id: object.employee_id)[0]
+    end
     
-    # # Adds the queryable field of address in the FactIntervention type class
-    # field :address, Types::AddressType, null: true
+    # Adds the queryable field of address in the FactIntervention type class
+    field :address, Types::AddressType, null: true
 
-    # # Defines the address attribute where the FactIntervention_id  is equal to the building id
-    # def address
-    #   Address.where(building_id: object.building_id)[0]
-    # end
+    # Defines the address attribute where the FactIntervention_id  is equal to the building id
+    def address
+      Address.where(building_id: object.building_id)[0]
+    end
   end
 end
