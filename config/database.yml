@@ -1,27 +1,4 @@
-# development:
-#   database: MaximeAuger_mysql
-#   adapter: mysql2
-#   port: 3306
-#   encoding: utf8
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   username: root 
-#   password: Admin007*
-#   socket: /var/run/mysqld/mysqld.sock
-
-
-
-
-# dwh_development:
-#   database: MaximeAuger_psql
-#   adapter: postgresql
-#   port: 5432
-#   host: localhost
-#   encoding: utf8
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   username: postgres
-#   password: postgres
-
-  development:
+development:
   database: MaximeAuger_mysql
   adapter: mysql2
   port: 3306
@@ -43,3 +20,26 @@ dwh_development:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: postgres
+
+#   development:
+#   database: MaximeAuger_mysql
+#   adapter: mysql2
+#   port: 3306
+#   encoding: utf8
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: root 
+#   password: Admin007*
+#   socket: /var/run/mysqld/mysqld.sock
+
+
+
+
+# dwh_development:
+#   database: MaximeAuger_psql
+#   adapter: postgresql
+#   port: 5432
+#   host: localhost
+#   encoding: utf8
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: postgres
+#   password: postgres
