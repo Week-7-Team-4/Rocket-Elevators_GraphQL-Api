@@ -7,6 +7,7 @@ module Types
     field :created_at, String, null: true
     field :updated_at, String, null: true
     field :battery_id, Integer, null: true
+    field :id, ID, null: false
     
     # Adds the queryable field of battery in the Column type class
     field :battery, Types::BatteryType, null: true

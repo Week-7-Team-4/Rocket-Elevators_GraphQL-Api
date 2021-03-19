@@ -19,6 +19,7 @@ module Types
 
     field :address_information, [String], null: false
 
+    # function that gathers all the information
     def address_information
       thing = ""
       if object.building_id != ""
@@ -30,8 +31,10 @@ module Types
       return [thing, "Status: #{object.status}", "Entity: #{object.entity}", "Number And Street: #{object.number_street}", "City: #{object.city}", "Postal Code: #{object.postal_code}", "Country: #{object.country}"]
     end
 
+    # Adds the queryable field of building in the address type class
     field :building, Types::BuildingType, null: true
-
+    
+    # Defines the building attribute where the address_id is equal to the building id
     def building
       Building.where(id: object.building_id)[0]
     end

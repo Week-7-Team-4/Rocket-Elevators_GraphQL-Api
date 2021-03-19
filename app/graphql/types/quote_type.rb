@@ -21,5 +21,9 @@ module Types
     field :date, String, null: true
     field :created_at, String, null: true
     field :updated_at, String, null: true
+    field :id, ID, null: false
+   
+    
+
   end
 end
